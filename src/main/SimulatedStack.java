@@ -18,39 +18,20 @@ public class SimulatedStack<T> {
 	//Eliminar último elemento
 	public void PilaPop() {
 		if (!PilaSimulada.isEmpty()) {
-			PilaSimulada.remove(-1);
+			PilaSimulada.remove(PilaSimulada.get(PilaSimulada.size() - 1));
 			System.out.println("Último elemento eliminado con éxito.");
 		} else {
 			System.out.println("La lista está vaciía.");
 		}
 	}
 	
+	public T PilaPeek() {
+		int cantidad_elementos = PilaSimulada.size();
+		return PilaSimulada.get(cantidad_elementos - 1);
+	}
+	
 	//Comprobar si la lista está vacía
 	public boolean PilaIsEmpty() {
 		return PilaSimulada.isEmpty();
-	}
-	
-	public int PilaSearch(T elemento) {
-		int contadorElementos = 0;
-		boolean encontrado = false;
-		for (T i : PilaSimulada) {
-			if (!encontrado) {
-				contadorElementos++;
-			}
-			if (i.equals(elemento)) {
-				encontrado = true;
-			}
-		}
-		return contadorElementos;
-			
-	}
-	
-	//Devuelve tamaño de la lista.
-	public int PilaSize() {
-		int contadorElementos = 0;
-		for (T i : PilaSimulada) {
-			contadorElementos++;
-		}
-		return contadorElementos;
 	}
 }
