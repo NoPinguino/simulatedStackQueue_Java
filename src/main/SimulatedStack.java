@@ -1,11 +1,11 @@
 package main;
 import java.util.ArrayList;
 
-public class Stack<T> {
+public class SimulatedStack<T> {
 	private ArrayList<T> PilaSimulada;
 	
 	//Constructor
-	public Stack() {
+	public SimulatedStack() {
 		PilaSimulada = new ArrayList<T>();
 	}
 	

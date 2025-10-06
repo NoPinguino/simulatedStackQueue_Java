@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class Main {
 	public static void main(String[] args) {
-		ArrayList<String> PilaSimulada = new ArrayList<>();
+		SimulatedStack<String> PilaSimulada = new SimulatedStack<>();
 		PilaSimulada.add("Elemento 1.");
 		PilaSimulada.add("Elemento 2.");
 		PilaSimulada.add("Elemento 3.");
@@ -12,5 +12,4 @@ public class Main {
 		
 		
 	}
-
 }
